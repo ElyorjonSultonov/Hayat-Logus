@@ -1,0 +1,245 @@
+.custom_scrollbar {
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    box-shadow: 0 0 0 1px #616161;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 20px;
+    border-left: 2px solid #f5f5f5;
+    border-right: 2px solid #f5f5f5;
+    background-clip: padding-box;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 76px;
+  border-bottom: var(--borderStyle);
+
+  .left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .logo {
+      margin-right: 50px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: flex-start;
+      height: 100%;
+
+      .nav_item {
+        height: 100%;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: rgba(0, 0, 0, 0.38);
+        transition: 0.3s;
+        user-select: none;
+        cursor: pointer;
+        border-radius: 0;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #64b6f7;
+          color: #fff;
+        }
+      }
+
+      .nav_item__active {
+        background-color: #64b6f7;
+        color: #fff;
+      }
+    }
+  }
+
+  .right {
+    .profile_text {
+      color: rgba(0, 0, 0, 0.38);
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.1px;
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.main_wrapper {
+
+  // height: calc(1080px - 76px);
+  .menu_wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  .table {
+    width: 29%;
+    padding: 20px;
+    height: 83vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .form {
+    width: calc(70%);
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  .textField {
+    width: 100%;
+  }
+
+  
+
+  .ml10 {
+    margin-left: 10px;
+  }
+
+
+  .submenu {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.dropdown_menu {
+  a {
+    color: #212121;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.table {
+  width: 29%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+}
+
+.tableSearch {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+
+  padding: 10px 54px;
+  width: 100%;
+}
+
+.tableBody {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    th {
+      background: #64b6f7;
+      box-sizing: border-box;
+    }
+  }
+
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 326px;
+  }
+
+  th,
+  td {
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 10px;
+    text-align: left;
+  }
+}
+.secondaryButton {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+}
+.secondaryButtonMini{
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.23) !important;
+  color: black  !important;
+  border-radius: 4px;
+}
+

@@ -1,0 +1,121 @@
+.main_wrapper {
+  // height: calc(1080px - 76px);
+  .menu_wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+  .textField {
+    width: 100%;
+  }
+
+  .secondaryButton {
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+  }
+
+  .ml10 {
+    margin-left: 10px;
+  }
+
+  .submenu {
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.invoice_wrapper {
+  .header_content {
+    width: 60%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  .button {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.15px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    color: #000000;
+  }
+  .invoice_header {
+    display: flex;
+    align-items: center;
+  }
+  .headerActions {
+    display: flex;
+    gap: 10px;
+  }
+  .navbar {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    margin: 10px 0;
+  }
+  .col {
+    display: flex;
+    align-items: center;
+    button {
+      margin-left: 10px;
+    }
+  }
+  .tableWrapper {
+    min-height: 500px;
+  }
+}

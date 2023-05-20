@@ -1,0 +1,155 @@
+.header {
+  padding: 20px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.header button svg {
+  margin-right: 10px;
+}
+
+.active td:first-child {
+  text-align: center;
+}
+.active td:first-child span {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  background: #007DFF;
+  position: relative;
+}
+.active td:first-child span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -3.5px;
+  right: 0;
+  border: 1px solid #007DFF;
+  width: 13px;
+  box-sizing: border-box;
+  margin: auto;
+  height: 13px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.table {
+  width: 99%;
+  height: 40vh;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tableBody {
+  border-collapse: collapse;
+  width: 100%;
+}
+.tableBody thead th {
+  background: #64b6f7;
+}
+.tableBody td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 326px;
+}
+.tableBody th,
+.tableBody td {
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 10px;
+  text-align: left;
+}
+
+.incomeRightHeader, .incomeLeftHeader {
+  display: flex;
+  align-items: center;
+}
+.incomeRightHeader button, .incomeLeftHeader button {
+  align-self: normal;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  margin: 0 20px;
+}
+.incomeRightHeader button svg, .incomeLeftHeader button svg {
+  margin: 0;
+}
+
+.datePicker {
+  margin-left: 20px !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col {
+  padding: 20px 30px;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secondaryButton {
+  align-self: normal;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  margin: 0 20px;
+}
+.secondaryButton svg {
+  margin: 0;
+}
+
+.w40 {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.iconicButton {
+  all: unset;
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+.mr90 {
+  margin-right: 90px !important;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.h400 {
+  height: 500px;
+}/*# sourceMappingURL=registry.module.css.map */

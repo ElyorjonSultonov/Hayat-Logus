@@ -1,0 +1,13 @@
+.filter{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    gap: 20px;
+    
+}
+.secondaryButton{
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    align-self: stretch;
+    border-radius: 4px;
+}

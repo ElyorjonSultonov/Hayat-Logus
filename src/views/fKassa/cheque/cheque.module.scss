@@ -1,0 +1,26 @@
+.table {
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  & > div, button {
+    margin: 10px 0 10px 10px;
+  }
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.87);
+
+  svg {
+    margin-right: 10px;
+  }
+}

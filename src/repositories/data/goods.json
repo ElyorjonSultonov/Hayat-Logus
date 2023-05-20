@@ -1,0 +1,44 @@
+[
+  {
+    "code": "2046",
+    "name": "5-НОК 50МГ ТАБ N=50",
+    "manafacture": "БИОФАРМ, ГРУЗИЯ",
+    "measurements": "40",
+    "packs": 6,
+    "barcode": 3836957097,
+    "receipt": false,
+    "sprav": true,
+    "mx": "НДС",
+    "fom": "Накладки лактационны",
+    "fom_group": "Накладки для груди",
+    "fix": 0.0
+  },
+  {
+    "code": "2066",
+    "name": "ФУРОСЕМИД Р.Р 10МГ/МЛ 2МЛ АМП NE1O",
+    "manafacture": "RADIKS. УЗБЕКИСТАН",
+    "measurements": "ФЛАК",
+    "packs": 6,
+    "barcode": 2990010048,
+    "receipt": false,
+    "sprav": true,
+    "mx": "НДС",
+    "fom": "Шприц инсулиновый Ц.",
+    "fom_group": "Шприцы",
+    "fix": 0.0
+  },
+  {
+    "code": "2046",
+    "name": "5-НОК 50МГ ТАБ N=50",
+    "manafacture": "БИОФАРМ, ГРУЗИЯ",
+    "measurements": "40",
+    "packs": 6,
+    "barcode": 3836957097,
+    "receipt": false,
+    "sprav": false,
+    "mx": "НДС",
+    "fom": "Накладки лактационны",
+    "fom_group": "Накладки для груди",
+    "fix": 0.0
+  }
+]

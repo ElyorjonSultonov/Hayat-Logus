@@ -1,0 +1,91 @@
+.toolbox {
+  padding: 10px 30px 20px;
+  display: flex;
+  align-items: center;
+  .label:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+.label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-right: 10px;
+}
+
+.secondaryButton {
+  margin-left: 10px !important;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  transition: all ease 0.4s;
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -ms-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  &:hover {
+    background-color: #64b6f7 !important;
+    border-color: #64b6f7;
+
+    path {
+      stroke: #fff;
+    }
+  }
+}
+.textField {
+  width: 100%;
+  margin-bottom: 20px !important;
+}
+
+.table {
+}
+.table_header {
+  padding: 0 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  button {
+    padding: 13px 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 30px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.87);
+    svg {
+      margin-right: 15px;
+    }
+  }
+}
+
+.content {
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  th,
+  td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .tableHeader {
+    background: #64b6f7;
+    height: 90px;
+    th {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+  tbody{
+  }
+}
+
+

@@ -1,0 +1,12 @@
+.routerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.routerWrapper button {
+  margin: 20px 10px;
+}
+.routerWrapper a {
+  text-decoration: none;
+}/*# sourceMappingURL=index.module.css.map */
