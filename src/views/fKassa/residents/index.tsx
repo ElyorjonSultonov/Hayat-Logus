@@ -147,16 +147,16 @@ function ResidentTable() {
         <div className="search-bar-left">
           <div className="text-search">
             <label>Поиск по тексту</label>
-            <input type="text" />
+            <input className="searchInput" type="text" />
           </div>
           <div className="teg-search">
             <label>Теги</label>
-            <input type="text" />
+            <input className="tagsInput" type="text" />
           </div>
-          <div className="detail-check">
+          {/* <div className="detail-check">
             <input type="checkbox" />
             <label>Детализировать по гостям</label>
-          </div>
+          </div> */}
         </div>
         <div className="search-bar-right">
           <button>

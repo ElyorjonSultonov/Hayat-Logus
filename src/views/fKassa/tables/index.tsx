@@ -176,9 +176,17 @@ function BronTable() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Схема размещения и сроки" {...a11yProps(0)} />
-            <Tab label="Тип комнаты и тарифы" {...a11yProps(1)} />
-            <Tab label="Комната" {...a11yProps(2)} />
+            <Tab
+              className="scheme "
+              label="Схема размещения и сроки"
+              {...a11yProps(0)}
+            />
+            <Tab
+              className="rates"
+              label="Тип комнаты и тарифы"
+              {...a11yProps(1)}
+            />
+            <Tab className="room" label="Комната" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>

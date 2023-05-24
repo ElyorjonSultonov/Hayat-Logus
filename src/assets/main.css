@@ -124,9 +124,12 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  padding: 6px 16px;
+  /* padding: 8px 16px; */
+  height: 36px;
   font-family: "Roboto";
   border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  cursor: pointer;
 }
 .main-side h3 {
   font-weight: 500;
@@ -183,10 +186,17 @@
   letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.87);
 }
-.text-search input {
+.search-bar input {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.23);
   border-radius: 4px;
+  height: 40px;
+}
+.search-bar .searchInput {
+  min-width: 500px;
+}
+.search-bar .tagsInput {
+  min-width: 300px;
 }
 .teg-search {
   display: flex;
@@ -228,15 +238,20 @@
   background: #2196f3;
   border-radius: 4px;
   border: none;
-  padding: 6px 16px;
+  padding: 9px 16px;
+  /* height: 32px;
+  width: 105px; */
+  text-align: center;
   cursor: pointer;
 }
+
 .search-bar-right button:nth-child(2) {
   background: #eeeeee;
   border-radius: 4px;
   width: 32px;
   height: 32px;
   border: none;
+  cursor: pointer;
 }
 
 .table-date {
@@ -309,6 +324,18 @@
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
   background-color: #3397ff !important;
   color: white !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  max-width: 450px !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root:nth-child(2) {
+  width: 260px !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root:nth-child(3) {
+  width: 150px !important;
+}
+.css-ahj2mt-MuiTypography-root {
+  margin-top: 10px !important;
 }
 .css-1aquho2-MuiTabs-indicator {
   display: none !important;
@@ -396,4 +423,12 @@
 /* Ожидаемый заезд css */
 .css-1iyq7zh-MuiDataGrid-columnHeaders {
   background: #64b6f7;
+}
+
+.scheme {
+  width: 450px;
+}
+.rates {
+}
+.room {
 }

@@ -8,9 +8,11 @@ import { SubMenus } from "../../constants/menu";
 import classes from "./index.module.scss";
 import { ReactComponent as BookIcon } from "../../assets/icons/book.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close-square.svg";
-import { ReactComponent as SearchIcon } from "../../assets/icons/search-alt-2.svg";
+// import { ReactComponent as SearchIcon } from "../../assets/icons/search-alt-2.svg";
 import { ReactComponent as WalletIcon } from "../../assets/icons/wallet-money.svg";
 import Modal from "../../components/modal";
+import SearchIcon from "../../assets/icons/search-white.svg";
+
 // import FkassaRegistryContainer from "../../containers/fkassa/registry";
 // import FKassaRegistryView from "../fKassa/registry";
 // import BronTable from "../fKassa/tables";
@@ -122,16 +124,16 @@ const MainView = ({ setDirectoryModal, directoryModal }) => {
         <div className="search-bar-left">
           <div className="text-search">
             <label>Поиск по тексту</label>
-            <input type="text" />
+            <input className="searchInput" type="text" />
           </div>
           <div className="teg-search">
             <label>Теги</label>
-            <input type="text" />
+            <input className="tagsInput" type="text" />
           </div>
-          <div className="detail-check">
+          {/* <div className="detail-check">
             <input type="checkbox" />
             <label>Детализировать по гостям</label>
-          </div>
+          </div> */}
         </div>
         <div className="search-bar-right">
           <button>
