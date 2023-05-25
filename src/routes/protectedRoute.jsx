@@ -15,7 +15,6 @@ function ProtectedRoute() {
     () => AuthorizationStateKeeper.instance
   );
   const { role } = authorizationStateKeeper;
-  console.log(role)
   // const role=localStorage.getItem("role")
 
 

@@ -14,7 +14,6 @@ const AppRouting = observer(() => {
   );
 
   const { role } = authorizationStateKeeper;
-  console.log(role);
 
   //  RoutingData["admin"];
   useEffect(() => {
@@ -33,7 +32,7 @@ const AppRouting = observer(() => {
         <Route element={<ProtectedRoute />}>
           {RoutingData[role].map((item, i) => {
             return (
-              <>
+              <Route key={i}>
                 <Route key={i} path={item.path} element={item.component} />
                 {item.global && (
                   <Route
@@ -41,7 +40,7 @@ const AppRouting = observer(() => {
                     element={<Navigate to={item.path} replace />}
                   />
                 )}
-              </>
+              </Route>
             );
           })}
         </Route>

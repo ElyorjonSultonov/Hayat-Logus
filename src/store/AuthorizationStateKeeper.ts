@@ -17,9 +17,18 @@ class AuthorizationStateKeeper {
   private getTokensFromLocalStorage(): any {
     return localStorage.getItem("token") || {};
   }
-  
+
+  private getAccessFromLocalStorage(): any {
+    return localStorage.getItem("access") || {};
+  }
+  private getRefreshFromLocalStorage(): any {
+    return localStorage.getItem("refresh") || {};
+  }
+
   token: any = this.getTokensFromLocalStorage();
   role: string = this.getRoleFromLocalStorage();
+  access: any = this.getAccessFromLocalStorage();
+  refresh: any = this.getRefreshFromLocalStorage();
 
   constructor() {
     makeAutoObservable(this, {}, { autoBind: true });
@@ -32,6 +41,25 @@ class AuthorizationStateKeeper {
     localStorage.removeItem("token");
     this.token = {};
   }
+  setAccess(data: any) {
+    localStorage.setItem("access", data);
+    this.access = data;
+  }
+  removeAccess(){
+    localStorage.removeItem("access");
+    this.access={};
+
+  }
+  setRefresh(data: any) {
+    localStorage.setItem("refresh", data);
+    this.refresh = data;
+  }
+  removeRefresh(){
+    localStorage.removeItem("refresh");
+    this.refresh={};
+
+  }
+
   removeRole() {
     localStorage.removeItem("role");
     this.role = "NoAuth";

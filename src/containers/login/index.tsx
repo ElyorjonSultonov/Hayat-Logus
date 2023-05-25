@@ -5,6 +5,7 @@ import AuthorizationStateKeeper from "../../store/AuthorizationStateKeeper";
 import LoginView from "../../views/login";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../../constants/base_url";
 
 const LoginContainer = () => {
   const navigate = useNavigate();
@@ -23,6 +24,9 @@ const LoginContainer = () => {
   );
   const { setRole } = localAuthorizationStateKeeper;
   const { setToken } = localAuthorizationStateKeeper;
+  const { setAccess } = localAuthorizationStateKeeper;
+  const { setRefresh } = localAuthorizationStateKeeper;
+
   const handleChange =
     (prop: keyof ILoginState) =>
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,13 +61,15 @@ const LoginContainer = () => {
     const formData = new FormData();
     formData.append("email", values.login);
     formData.append("password", values.password);
-    setToken("");
+
     axios
-      .post("/account/login/", formData)
+      .post(`${BASE_URL}/account/custom-login/`, formData)
       .then((response) => {
-        setToken(JSON.stringify(response.data));
+        setRefresh(JSON.stringify(response.data.refresh))
+        setAccess(JSON.stringify(response.data.access))
         setRole("admin");
         navigate("/global/branches");
+        setErrorClient(false);
       })
       .catch((err) => {
         setErrorClient(true);

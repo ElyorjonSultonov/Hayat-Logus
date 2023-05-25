@@ -182,12 +182,12 @@ const LoginView = ({
 
                   <Button
                     sx={{ height: "42px" }}
-                    disabled={
-                      !(
-                        values.isLoginValid === true &&
-                        values.isPasswordValid === true
-                      )
-                    }
+                    // disabled={
+                    //   !(
+                    //     values.isLoginValid === true &&
+                    //     values.isPasswordValid === true
+                    //   )
+                    // }
                     color="primary"
                     variant="contained"
                     onClick={loginAction}

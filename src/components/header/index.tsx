@@ -27,7 +27,7 @@ const Header = ({ data }) => {
   const localAuthorizationStateKeeper = useLocalObservable(
     () => AuthorizationStateKeeper.instance
   );
-  const { setRole, removeToken } = localAuthorizationStateKeeper;
+  const { setRole, removeToken,removeAccess,removeRefresh } = localAuthorizationStateKeeper;
   const handleClick = (
     index: string,
     event: React.MouseEvent<HTMLButtonElement>
@@ -37,6 +37,9 @@ const Header = ({ data }) => {
   const handleLogOut = () => {
     setRole("NoAuth");
     removeToken();
+    removeAccess();
+    removeRefresh()
+    
   };
   const handleModalOpener = (path: string) => {
     if (path === "Отчёт") {
