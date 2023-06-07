@@ -5,6 +5,7 @@ import React from "react";
 import EditIcon from "../../../assets/icons/edit-icon.svg";
 import SearchIcon from "../../../assets/icons/search-white.svg";
 import XMark from "../../../assets/icons/xmark.svg";
+import { useArrivalsQuery } from "../../../services/arrivalApi";
 
 const columns = [
   { field: "id", headerName: "№", width: 71 },
@@ -87,53 +88,81 @@ const rows = [
     duration: "10 дней",
     packet: "ППЗМ, DS",
   },
-  {
-    id: 2,
-    name: "Собирова Саида",
-    group: "",
-    dateCome: "15.04.2023",
-    dateGo: "23.04.2023",
-    typeRoom: "PEAHM.K",
-    room: 211.1,
-    countUser: "1 взр.",
-    balance: 46200000,
-    paid: 0,
-    tariff: "СТД",
-    duration: "10 дней",
-    packet: "ППЗМ, DS",
-  },
-  {
-    id: 3,
-    name: "Голубничая Любовь Порфиревна",
-    group: "",
-    dateCome: "15.04.2023",
-    dateGo: "23.04.2023",
-    typeRoom: "PEAHM.K",
-    room: 211.1,
-    countUser: "1 взр.",
-    balance: 46200000,
-    paid: 0,
-    tariff: "СТД",
-    duration: "10 дней",
-    packet: "ППЗМ, DS",
-  },
-  {
-    id: 4,
-    name: "Салихова Саима",
-    group: "",
-    dateCome: "15.04.2023",
-    dateGo: "23.04.2023",
-    typeRoom: "PEAHM.K",
-    room: 211.1,
-    countUser: "1 взр.",
-    balance: 46200000,
-    paid: 0,
-    tariff: "СТД",
-    duration: "10 дней",
-    packet: "ППЗМ, DS",
-  },
 ];
+// {
+//   id: 2,
+//   name: "Собирова Саида",
+//   group: "",
+//   dateCome: "15.04.2023",
+//   dateGo: "23.04.2023",
+//   typeRoom: "PEAHM.K",
+//   room: 211.1,
+//   countUser: "1 взр.",
+//   balance: 46200000,
+//   paid: 0,
+//   tariff: "СТД",
+//   duration: "10 дней",
+//   packet: "ППЗМ, DS",
+// },
+// {
+//   id: 3,
+//   name: "Голубничая Любовь Порфиревна",
+//   group: "",
+//   dateCome: "15.04.2023",
+//   dateGo: "23.04.2023",
+//   typeRoom: "PEAHM.K",
+//   room: 211.1,
+//   countUser: "1 взр.",
+//   balance: 46200000,
+//   paid: 0,
+//   tariff: "СТД",
+//   duration: "10 дней",
+//   packet: "ППЗМ, DS",
+// },
+// {
+//   id: 4,
+//   name: "Салихова Саима",
+//   group: "",
+//   dateCome: "15.04.2023",
+//   dateGo: "23.04.2023",
+//   typeRoom: "PEAHM.K",
+//   room: 211.1,
+//   countUser: "1 взр.",
+//   balance: 46200000,
+//   paid: 0,
+//   tariff: "СТД",
+//   duration: "10 дней",
+//   packet: "ППЗМ, DS",
+// },
+
 function ResidentTable() {
+  const {
+    data: arrivals,
+    isLoading,
+    isSuccess,
+    isError,
+  } = useArrivalsQuery(arguments);
+  const rowss =
+    isSuccess &&
+    arrivals.map((item) => {
+      return {
+        id: item.id,
+        name: item.patients.f_name,
+        group: "1",
+        dateCome: item.patients.created_at,
+        dateGo: item.patients.last_visit_at,
+        typeRoom: item.room_price.room_type.name,
+        room: item.room.room_number,
+        balance: `${item.abs_price} sum`,
+        paid: `${item.discount} sum`,
+        tariff: item.room_price.tariff.name,
+        duration:"10"
+      };
+    });
+  let date = new Date("2023-05-31T16:29:39.742494+05:00");
+
+  console.log(date);
+  console.log(rowss)
   return (
     <div className="main-side">
       <div className="main-side-head">
@@ -142,7 +171,6 @@ function ResidentTable() {
           <img src={EditIcon} alt="icon" />
         </button>
       </div>
-
       <div className="search-bar">
         <div className="search-bar-left">
           <div className="text-search">
@@ -168,10 +196,9 @@ function ResidentTable() {
           </button>
         </div>
       </div>
-
       <Box sx={{ width: "100%", height: "70%" }}>
         <DataGrid
-          rows={rows}
+          rows={rowss}
           columns={columns}
           checkboxSelection
           disableRowSelectionOnClick

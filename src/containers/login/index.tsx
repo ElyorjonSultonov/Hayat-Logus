@@ -65,8 +65,8 @@ const LoginContainer = () => {
     axios
       .post(`${BASE_URL}/account/custom-login/`, formData)
       .then((response) => {
-        setRefresh(JSON.stringify(response.data.refresh))
-        setAccess(JSON.stringify(response.data.access))
+        setRefresh(JSON.stringify(response.data.refresh));
+        setAccess(JSON.stringify(response.data.access));
         setRole("admin");
         navigate("/global/branches");
         setErrorClient(false);
