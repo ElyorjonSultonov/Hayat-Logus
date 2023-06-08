@@ -1,3 +1,3 @@
-export const convertTime=(date)=>{
-    
-}
+export const convertTime = (date) => {
+  return new Date(date).toJSON().slice(0, 10).split("-").reverse().join(".");
+};

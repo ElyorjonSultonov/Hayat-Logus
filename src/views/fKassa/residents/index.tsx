@@ -6,6 +6,8 @@ import EditIcon from "../../../assets/icons/edit-icon.svg";
 import SearchIcon from "../../../assets/icons/search-white.svg";
 import XMark from "../../../assets/icons/xmark.svg";
 import { useArrivalsQuery } from "../../../services/arrivalApi";
+import { countDuration } from "../../../utils/countDayDuration";
+import { convertTime } from "../../../utils/convertTime";
 
 const columns = [
   { field: "id", headerName: "№", width: 71 },
@@ -142,6 +144,7 @@ function ResidentTable() {
     isSuccess,
     isError,
   } = useArrivalsQuery(arguments);
+
   const rowss =
     isSuccess &&
     arrivals.map((item) => {
@@ -149,20 +152,22 @@ function ResidentTable() {
         id: item.id,
         name: item.patients.f_name,
         group: "1",
-        dateCome: item.patients.created_at,
-        dateGo: item.patients.last_visit_at,
+        dateCome: convertTime(item.patients.created_at),
+        dateGo: convertTime(item.patients.last_visit_at),
         typeRoom: item.room_price.room_type.name,
         room: item.room.room_number,
+        countUser: item.guests_count,
         balance: `${item.abs_price} sum`,
         paid: `${item.discount} sum`,
         tariff: item.room_price.tariff.name,
-        duration:"10"
+        duration: countDuration(
+          item.patients.created_at,
+          item.patients.last_visit_at
+        ),
+        packet: item.discount,
       };
     });
-  let date = new Date("2023-05-31T16:29:39.742494+05:00");
 
-  console.log(date);
-  console.log(rowss)
   return (
     <div className="main-side">
       <div className="main-side-head">
